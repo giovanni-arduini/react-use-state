@@ -7,7 +7,7 @@ function LanguagesWrapper() {
     <section className="main">
       <ul>
         {languages.map((language) => (
-          <li>
+          <li key={language.id}>
             <Button label={language.title} />
           </li>
         ))}
