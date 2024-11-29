@@ -2,6 +2,7 @@ import Button from "../Button/Button";
 import Card from "../Card/Card";
 import languages from "../../languages";
 import { useState } from "react";
+import style from "./LanguagesWrapper.module.css";
 
 function LanguagesWrapper() {
   const [selectedLanguageId, setSelectedLanguageId] = useState();
@@ -11,8 +12,8 @@ function LanguagesWrapper() {
   );
 
   return (
-    <section className="main">
-      <ul>
+    <section className={style.container}>
+      <ul className={style.languages}>
         {languages.map(({ id, title }) => (
           <li key={id}>
             <Button
@@ -26,15 +27,10 @@ function LanguagesWrapper() {
       </ul>
       <div>
         <Card
-          title={
-            selectedLanguage
-              ? selectedLanguage.title
-              : "Nessun linguaggio selezionato"
-          }
+          title={selectedLanguage?.title ?? "Nessun linguaggio selezionato"}
           description={
-            selectedLanguage
-              ? selectedLanguage.description
-              : "Selezionare un linguaggio con i pulsanti"
+            selectedLanguage?.description ??
+            "Selezionare un linguaggio con i pulsanti"
           }
         />
       </div>

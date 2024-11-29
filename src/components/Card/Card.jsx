@@ -1,8 +1,10 @@
+import style from "./Card.module.css";
+
 function Card({ title, description }) {
   return (
-    <div className="">
-      <h3>{title}</h3>
-      <p>{description}</p>
+    <div className={style.card}>
+      <h3 className={style.title}>{title}</h3>
+      <p className={style.description}>{description}</p>
     </div>
   );
 }

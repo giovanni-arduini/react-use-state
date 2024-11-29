@@ -1,0 +1,17 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid grey;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+}
+
+.title {
+  font-size: large;
+  font-weight: 600;
+}
+
+.description {
+  font-size: medium;
+  font-weight: 400;
+}
