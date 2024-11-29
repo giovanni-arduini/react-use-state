@@ -1,5 +1,5 @@
-function Button() {
-  return <button>Titolo del linguaggio</button>;
+function Button({ label }) {
+  return <button>{label}</button>;
 }
 
 export default Button;

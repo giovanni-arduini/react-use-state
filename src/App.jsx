@@ -1,12 +1,12 @@
 import "./App.css";
 import Header from "./components/Header/Header";
-import Main from "./components/Main/Main";
+import LanguagesWrapper from "./components/LanguagesWrapper/LanguagesWrapper";
 
 function App() {
   return (
     <>
       <Header />
-      <Main />
+      <LanguagesWrapper />
     </>
   );
 }
