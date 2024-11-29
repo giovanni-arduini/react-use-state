@@ -6,6 +6,10 @@ import { useState } from "react";
 function LanguagesWrapper() {
   const [selectedLanguageId, setSelectedLanguageId] = useState(1);
 
+  const selectedLanguage = languages.find(
+    (language) => language.id === selectedLanguageId
+  );
+
   return (
     <section className="main">
       <ul>
@@ -13,7 +17,7 @@ function LanguagesWrapper() {
           <li key={id}>
             <Button
               onClick={() => {
-                setSelectedLanguageId;
+                setSelectedLanguageId(id);
               }}
               label={title}
             />
@@ -21,7 +25,10 @@ function LanguagesWrapper() {
         ))}
       </ul>
       <div>
-        <Card />
+        <Card
+          title={selectedLanguage.title}
+          description={selectedLanguage.description}
+        />
       </div>
     </section>
   );

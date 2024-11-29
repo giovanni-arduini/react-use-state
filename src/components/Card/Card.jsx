@@ -1,8 +1,8 @@
-function Card() {
+function Card({ title, description }) {
   return (
     <div className="">
-      <h3>Titolo linguaggio</h3>
-      <p>Descrizione linguaggio</p>
+      <h3>{title}</h3>
+      <p>{description}</p>
     </div>
   );
 }
