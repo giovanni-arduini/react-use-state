@@ -4,7 +4,7 @@ import languages from "../../languages";
 import { useState } from "react";
 
 function LanguagesWrapper() {
-  const [selectedLanguageId, setSelectedLanguageId] = useState(1);
+  const [selectedLanguageId, setSelectedLanguageId] = useState();
 
   const selectedLanguage = languages.find(
     (language) => language.id === selectedLanguageId
@@ -26,8 +26,16 @@ function LanguagesWrapper() {
       </ul>
       <div>
         <Card
-          title={selectedLanguage.title}
-          description={selectedLanguage.description}
+          title={
+            selectedLanguage
+              ? selectedLanguage.title
+              : "Nessun linguaggio selezionato"
+          }
+          description={
+            selectedLanguage
+              ? selectedLanguage.description
+              : "Selezionare un linguaggio con i pulsanti"
+          }
         />
       </div>
     </section>
